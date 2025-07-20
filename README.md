@@ -6,9 +6,11 @@ WhisperBoard is a simple app to collect **anonymous feedback, ratings, and sugge
 
 ---
 
-##Demo Use
+## Demo
 **URL:** https://whisper-board-n37srxvl9-abhijeets-projects-02488f3b.vercel.app/
+
 **ID:** abhijeet@gmail.com
+
 **Password:** 123456
 
 ## 🚀 Use Cases
