@@ -3,6 +3,9 @@ from supabase import create_client, Client
 from dotenv import load_dotenv
 import os
 
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
 # Load environment variables from .env
 load_dotenv()
 
