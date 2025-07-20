@@ -58,9 +58,9 @@ WhisperBoard is a simple app to collect **anonymous feedback, ratings, and sugge
 
 ## 🔧 Tech Stack
 
-- **Backend:** Python
+- **Backend:** Flask
 - **Database:** Supabase Postgres
-- *(Optional)* Sentiment Analysis: Basic keyword-based approach
+
 
 ---
 
