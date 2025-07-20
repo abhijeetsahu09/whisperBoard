@@ -90,4 +90,4 @@ def admin_suggestions():
     return render_template('admin_suggestions.html', suggestions=suggestions)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
