@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Feedback</title>
+    <style>
+        body { background: #181a20; color: #e0e0e0; font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 40px auto; background: #23272f; border-radius: 8px; padding: 32px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border-bottom: 1px solid #444; }
+        th { background: #222; }
+        .logout-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffb300;
+    text-decoration: none;
+}
+.logout-link:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Recent Feedback</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Comment</th>
+                <th>Time</th>
+            </tr>
+            {% for fb in feedbacks %}
+            <tr>
+                <td>{{ fb['name'] }}</td>
+                <td>{{ fb['rating'] }}</td>
+                <td>{{ fb['comment'] }}</td>
+                <td>{{ fb['created_at'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% if session.get('admin') %}
+    <a href="{{ url_for('admin_logout') }}" class="logout-link">Logout</a>
+{% endif %}
+    </div>
+</body>
+</html>

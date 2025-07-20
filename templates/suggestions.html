@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anonymous Suggestion Box</title>
+    <style>
+        body { background: #181a20; color: #e0e0e0; font-family: Arial, sans-serif; }
+        .container { max-width: 400px; margin: 60px auto; background: #23272f; border-radius: 8px; padding: 32px; }
+        textarea { width: 100%; background: #181a20; color: #fafafa; border: 1px solid #444; border-radius: 4px; padding: 8px; margin-bottom: 16px; }
+        button { background: #1976d2; color: #fff; border: none; border-radius: 4px; padding: 10px 20px; cursor: pointer; }
+        button:hover { background: #1565c0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Anonymous Suggestion Box</h2>
+        <form method="post">
+            <textarea name="content" rows="4" placeholder="Your suggestion..." required></textarea>
+            <button type="submit">Submit Suggestion</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Suggestions</title>
+    <style>
+        body { background: #181a20; color: #e0e0e0; font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 40px auto; background: #23272f; border-radius: 8px; padding: 32px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border-bottom: 1px solid #444; }
+        th { background: #222; }
+        .logout-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffb300;
+    text-decoration: none;
+}
+.logout-link:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Recent Suggestions</h2>
+        <table>
+            <tr>
+                <th>Suggestion</th>
+                <th>Time</th>
+            </tr>
+            {% for s in suggestions %}
+            <tr>
+                <td>{{ s['content'] }}</td>
+                <td>{{ s['created_at'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% if session.get('admin') %}
+    <a href="{{ url_for('admin_logout') }}" class="logout-link">Logout</a>
+{% endif %}
+    </div>
+</body>
+</html>

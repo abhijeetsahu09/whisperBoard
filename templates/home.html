@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback & Suggestions</title>
+    <style>
+        body { background: #181a20; color: #e0e0e0; font-family: Arial, sans-serif; text-align: center; }
+        .container { margin: 60px auto; max-width: 400px; background: #23272f; border-radius: 8px; padding: 32px; }
+        a { color: #1976d2; text-decoration: none; font-size: 1.2em; display: block; margin: 20px 0; }
+        .logout-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffb300;
+    text-decoration: none;
+}
+.logout-link:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if session.get('admin') %}
+    <p style="color:#ffb300;">You are logged in as <strong>Admin</strong>.</p>
+    <a href="{{ url_for('admin_logout') }}" class="logout-link">Logout</a>
+{% else %}
+    <p style="color:#e0e0e0;">You are not logged in as admin.</p>
+    <a href="{{ url_for('admin_login') }}" class="logout-link">Admin Login</a>
+{% endif %}
+        <h1>Welcome</h1>
+        <a href="{{ url_for('feedback') }}">Give Feedback</a>
+        <a href="{{ url_for('suggest') }}">Submit Anonymous Suggestion</a>
+        <a href="{{ url_for('admin_feedback') }}">Admin: View Feedback</a>
+        <a href="{{ url_for('admin_suggestions') }}">Admin: View Suggestions</a>
+    </div>
+</body>
+</html>
