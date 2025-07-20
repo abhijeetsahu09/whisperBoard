@@ -6,6 +6,13 @@ WhisperBoard is a simple app to collect **anonymous feedback, ratings, and sugge
 
 ---
 
+## Demo
+**URL:** https://whisper-board-n37srxvl9-abhijeets-projects-02488f3b.vercel.app/
+
+**ID:** abhijeet@gmail.com
+
+**Password:** 123456
+
 ## 🚀 Use Cases
 
 ✅ **Quick Feedback Collector**
@@ -27,7 +34,6 @@ WhisperBoard is a simple app to collect **anonymous feedback, ratings, and sugge
 - 🗳️ Submit **Name, Rating (1-5), and Comments**
 - 💾 Data stored securely in **Supabase table: `feedback`**
 - 👨‍💻 **Admin page** to view recent feedback
-- 🔍 *(Optional)* **Basic Sentiment Analysis** using keyword spotting for quick insights
 
 #### Feedback Table Schema
 
@@ -90,5 +96,5 @@ Add your Supabase URL and Key:
 3. **Run the app:**
 
  ```bash
- python app.py
+ python index.py
 
