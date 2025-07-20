@@ -16,6 +16,11 @@ SUPABASE = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(SUPABASE, SUPABASE_KEY)
 
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
 # Admin login route
 @app.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
@@ -50,9 +55,7 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-@app.route('/')
-def home():
-    return render_template('home.html')
+
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
