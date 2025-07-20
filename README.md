@@ -96,5 +96,5 @@ Add your Supabase URL and Key:
 3. **Run the app:**
 
  ```bash
- python app.py
+ python index.py
 
