@@ -6,6 +6,10 @@ WhisperBoard is a simple app to collect **anonymous feedback, ratings, and sugge
 
 ---
 
+##Demo ID Pass
+**ID:** abhijeet@gmail.com
+**Password:** 123456
+
 ## 🚀 Use Cases
 
 ✅ **Quick Feedback Collector**
@@ -27,7 +31,6 @@ WhisperBoard is a simple app to collect **anonymous feedback, ratings, and sugge
 - 🗳️ Submit **Name, Rating (1-5), and Comments**
 - 💾 Data stored securely in **Supabase table: `feedback`**
 - 👨‍💻 **Admin page** to view recent feedback
-- 🔍 *(Optional)* **Basic Sentiment Analysis** using keyword spotting for quick insights
 
 #### Feedback Table Schema
 
