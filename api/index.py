@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG)
 # Load environment variables from .env
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecretkey")
 
 SUPABASE = os.getenv("SUPABASE_URL")
